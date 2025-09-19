@@ -29,7 +29,7 @@
 
     .navbar h2 {
       margin: 0;
-      color: #f4142e; /* beige accent */
+      color: #f40303;
       font-size: 20px;
       letter-spacing: 1px;
     }
@@ -62,7 +62,7 @@
       bottom: -5px;
       width: 0%;
       height: 2px;
-      background: #e50914; /* Netflix red underline */
+      background: #e50914;
       transition: width 0.3s ease-in-out;
     }
 
@@ -72,6 +72,46 @@
 
     .nav-links a:hover::after {
       width: 100%;
+    }
+
+    /* Hamburger menu button */
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 5px;
+    }
+
+    .menu-toggle span {
+      width: 25px;
+      height: 3px;
+      background: #d4b483;
+      border-radius: 2px;
+      transition: all 0.3s ease;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .nav-links {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #1a1a1a;
+        flex-direction: column;
+        width: 200px;
+        padding: 20px;
+        gap: 15px;
+        display: none;
+        border-radius: 0 0 8px 8px;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
     }
 
     /* Container */
@@ -107,7 +147,7 @@
     h1 {
       text-align: center;
       font-size: 28px;
-      color: #f10e21;
+      color: #fd051a;
       margin-bottom: 20px;
       letter-spacing: 1px;
       white-space: nowrap;
@@ -177,6 +217,11 @@
       <li><a href="#">Movies</a></li>
       <li><a href="#">Contact Us</a></li>
     </ul>
+    <div class="menu-toggle" id="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
   </nav>
 
   <!-- Main Content -->
@@ -211,6 +256,15 @@
       <a href="https://t.me/CSZ_The_Baxxxds_of_Bollywood" target="_blank" class="btn btn-telegram">Watch for Free</a>
     </div>
   </div>
+
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
 </body>
 
 </html>
