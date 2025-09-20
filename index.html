@@ -120,6 +120,13 @@
             transform: translateY(-15px);
             transition: opacity 0.4s ease, transform 0.4s ease;
         }
+        @media (min-width: 769px) {
+    .nav-links li {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
         .menu-toggle {
             display: none;
@@ -247,13 +254,13 @@
             align-items: center;
             justify-content: center;
             gap: 8px;
-            box-shadow: 0 4px 12px rgba(244, 6, 18, 0.5);
+            box-shadow: 0 4px 12px rgba(244, 6, 6, 0.3);
             transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .view-btn:hover {
             transform: translateY(-2px) scale(1.05);
-            box-shadow: 0 6px 16px rgba(244, 6, 18, 0.7);
+            box-shadow: 0 6px 16px rgba(21, 8, 9, 0.7);
         }
 
         .view-btn i {
@@ -302,11 +309,20 @@
             box-shadow: 0 4px 12px rgba(229, 9, 20, 0.4);
         }
 
+        .btn-red:hover{
+            transform: translateY(-2px) scale(1.05);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.7);
+        }
+
         .btn-telegram {
             background: linear-gradient(135deg, #0088cc, #00a0e6);
             box-shadow: 0 4px 12px rgba(0, 150, 199, 0.4);
         }
-
+        
+        .btn-telegram:hover{
+            transform: translateY(-2px) scale(1.05);
+            box-shadow: 0 6px 16px rgba(8, 8, 8, 0.7);
+        }
         @media (min-width: 600px) {
             .btn {
                 flex: 0 0 auto;
@@ -403,6 +419,7 @@
 </body>
 
 </html>
+
 
 
 
